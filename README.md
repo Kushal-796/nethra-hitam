@@ -1,73 +1,201 @@
-# Welcome to your Lovable project
+# NETHRA
 
-## Project info
+## Agricultural Intelligence & Transaction Platform
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+NETHRA is an AI-powered Agricultural Intelligence and Transaction Platform designed to improve income stability for small and marginal farmers. The system integrates yield prediction, disease detection, fair price modeling, and marketplace connectivity into one unified ecosystem.
 
-## How can I edit this code?
+The goal is simple. Replace guesswork with data. Replace dependency with transparency.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+# Problem
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Small and marginal farmers face:
 
-Changes made via Lovable will be committed automatically to this repo.
+* No structured yield prediction
+* Late crop disease detection
+* Weak price transparency
+* High machinery ownership costs
+* Limited access to bulk buyers
+* Expensive or inaccessible financial services
 
-**Use your preferred IDE**
+This results in income instability and reduced profitability.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+NETHRA addresses these inefficiencies through predictive analytics and structured transaction support.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+# Core Features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 1. AI Yield Prediction
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Predicts expected crop yield using machine learning based on environmental and crop parameters.
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 2. Disease Detection
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Image-based crop disease identification for early intervention.
+
+## 3. Fertilizer Recommendation
+
+Optimized fertilizer suggestions to reduce overuse and cost.
+
+## 4. NETHRA Fair Price Index (NFPI)
+
+A fair pricing model calculated as:
+
+NFPI =
+0.6 × Today’s Modal Price
+
+* 0.3 × 7-Day Average
+* 0.1 × Demand Factor
+
+Provides a transparent and data-backed price reference.
+
+## 5. Equipment Rental Marketplace
+
+Enables farmers to rent tractors and machinery instead of purchasing.
+
+## 6. Buyer Integration
+
+Direct connection with bulk buyers such as retailers and institutions.
+
+---
+
+# Tech Stack
+
+## Frontend
+
+* React.js
+* Tailwind CSS
+* Deployed on Vercel (for development/demo)
+
+## Backend
+
+* FastAPI
+* REST APIs
+
+## Machine Learning
+
+* Random Forest (Yield Prediction)
+
+## External APIs
+
+* Market Price API (Mandi Data)
+* Satellite Data (NDVI & Environmental Data)
+* Image Analysis API (Disease Detection)
+* Location Services API
+
+## Cloud Infrastructure
+
+* AWS (Primary scalable deployment architecture)
+* Vercel (Frontend hosting during prototype phase)
+
+---
+
+# System Architecture
+
+The platform follows a layered architecture:
+
+1. User Interface Layer – Farmer inputs crop data and uploads images
+2. Application Layer – Backend request handling and routing
+3. Intelligence Layer – ML model processing and pricing logic
+4. Integration Layer – External APIs for price, satellite, and geo data
+
+This modular structure allows independent scaling of services.
+
+---
+
+# Deployment
+
+Current Demo Deployment:
+Frontend hosted on Vercel for rapid iteration.
+
+Production Architecture:
+Designed for AWS-based scalable deployment including compute services, storage, and secure API handling.
+
+---
+
+# Business Model
+
+NETHRA does not charge farmers.
+
+Revenue is generated from:
+
+* Equipment rental commission (5–7%)
+* Fertilizer affiliate partnerships
+* Financial institution commission
+* Buyer contract facilitation fee (~2%)
+
+The ecosystem pays. Farmers benefit.
+
+---
+
+# Installation (Development Setup)
+
+Clone the repository:
+
+```
+git clone https://github.com/your-repo/nethra.git
+cd nethra
+```
+
+Frontend Setup:
+
+```
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Backend Setup:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
-**Use GitHub Codespaces**
+Make sure environment variables are configured for API keys.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+# Testing
 
-This project is built with:
+* Unit testing for prediction modules
+* API integration testing
+* Edge case handling for invalid inputs
+* Performance testing for concurrent requests
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Cross-validation used for ML model evaluation.
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+# Limitations
 
-## Can I connect a custom domain to my Lovable project?
+* Depends on external APIs for disease detection and price data
+* Prediction accuracy depends on dataset quality
+* Requires internet connectivity
+* Model requires periodic retraining
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Future Scope
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+* In-house disease detection model
+* Multilingual AI chatbot support
+* IoT soil sensor integration
+* Blockchain-based contract transparency
+* AI-based credit scoring
+
+---
+
+# Team
+
+Team Name: Chakravyuh
+Team Lead: Kommu Hemasree
+Members: Kushal, Sunaina, Shashank
+College: GRIET
+
+---
+
+# License
+
+This project is developed for academic and hackathon purposes. Further commercialization requires licensing and regulatory compliance.

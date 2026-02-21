@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import LiveWallpaper from "@/components/LiveWallpaper";
-import { Truck } from "lucide-react";
+import { Truck, Droplets } from "lucide-react";
 import FeatureCard from "@/components/FeatureCard";
 import {
   Sprout,
@@ -22,6 +22,26 @@ const features = [
     accent: "green" as const,
     delay: 100,
     href: "/yield-prediction",
+  },
+  {
+    icon: Droplets,
+    title: "Fertilizer Recommendation",
+    description:
+      "Get AI-powered fertilizer recommendations based on your soil type, crop, location, and farming practices. Optimize nutrient application.",
+    badge: "AI Powered",
+    accent: "green" as const,
+    delay: 150,
+    href: "/predict-fertilizer",
+  },
+  {
+    icon: Leaf,
+    title: "Crop Recommendation",
+    description:
+      "Get personalized crop recommendations based on temperature, humidity, rainfall, and nitrogen levels. Find the best crop for your conditions.",
+    badge: "AI Powered",
+    accent: "green" as const,
+    delay: 175,
+    href: "/predict-new-model",
   },
   {
     icon: ScanSearch,
@@ -93,7 +113,7 @@ const Index = () => {
               <Sprout className="w-5 h-5 text-primary" />
             </div>
             <span className="font-display font-bold text-xl text-foreground">
-              Nethra
+              Nethra - The Vision for Smart Farming
             </span>
           </div>
           <button

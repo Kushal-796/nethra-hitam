@@ -6,9 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import YieldPrediction from "./pages/YieldPrediction";
+import FertilizerPrediction from "./pages/FertilizerPrediction";
+import { CropRecommendation } from "./pages/CropRecommendation";
 import DiseaseDetection from "./pages/DiseaseDetection";
 import MandiPrices from "./pages/MandiPrices";
-import SoilDetection from "./pages/SoilDetection"; // Import the new soil page
+import SoilDetection from "./pages/SoilDetection";
 import EquipmentRentals from "./pages/EquipmentRentals";
 const queryClient = new QueryClient();
 
@@ -21,6 +23,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/yield-prediction" element={<YieldPrediction />} />
+          <Route path="/predict-fertilizer" element={<FertilizerPrediction />} />
+          <Route path="/predict-new-model" element={<CropRecommendation />} />
           <Route path="/disease-detection" element={<DiseaseDetection />} />
           <Route path="/mandi-prices" element={<MandiPrices />} />
           
